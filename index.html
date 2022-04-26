@@ -1,5 +1,74 @@
 <html>
   <head> </head>
 
-  <body></body>
+  <body>
+    <h1>CS 184 Final Project Milestone</h1>
+    <h1>Iridescence</h1>
+    <h3>
+      Yin Deng (3033647998, yindeng@berkeley.edu, yinxudeng)<br />Joy Chang
+      (3034782362, joychang02@berkeley.edu, joyyy26)<br />Yuetian Tang
+      (3034728516, tangyuetian1123@berkeley.edu, yuetiantang) <br />Evelyn Wu
+      (3034524650, evelynpwu@berkeley.edu, evelynwu88)
+    </h3>
+
+    <h3>Milestone Video:</h3>
+    <h3>Milestone Slides:</h3>
+
+    <p>
+      We finished project 3-2 part 2 and are almost done with iridescent
+      rendering. For project 3-2 part 2, we followed the course specs. For
+      iridescent rendering, we followed this tutorial. In thin film interference
+      (a key component of iridescent rendering), we model light as waves instead
+      of photons. As light waves reflect back and forth within the thin film and
+      exit the thin film at different locations, the phases of the resulting
+      waves could cancel each other out or amplify each other, creating
+      iridescence. The details of the math and physics involved are covered in
+      the tutorial.
+    </p>
+    <p>
+      Here are some of the preliminary results for project 3-2 part 2 and
+      iridescent rendering:
+    </p>
+    <p>Microfacet Rendering:</p>
+    <img src="images/microfacet rendering/CBbunny.png" width="300" />
+    <img src="images/microfacet rendering/CBdragon.png" width="300" />
+    <img src="images/microfacet rendering/CBspheres.png" width="300" />
+    <p>Iridescent Rendering From Different Viewing Directions:</p>
+    <img src="images/iridescent rendering angle/iridescent1.png" width="300" />
+    <img src="images/iridescent rendering angle/iridescent2.png" width="300" />
+    <img src="images/iridescent rendering angle/iridescent3.png" width="300" />
+    <p>Iridescent Rendering with Increasing Thin Film Thickness:</p>
+    <img
+      src="images/iridescent rendering thickness/dragon_250.png"
+      width="300"
+    />
+    <img
+      src="images/iridescent rendering thickness/dragon_550.png"
+      width="300"
+    />
+    <img
+      src="images/iridescent rendering thickness/dragon_750.png"
+      width="300"
+    />
+    <p>
+      We have been following our proposed schedule mostly. One thing to note is
+      that we proposed to refactor code to account for lights with different
+      wavelengths. We thought this was necessary because human eyes have three
+      different color preceptors, and project 3-1 and project 3-2 mostly model
+      light as photons instead of waves. However, upon closer inspection, we
+      realized that the microfacet BSDF Fresnel term in project 3-2 part 2
+      actually accounts for lights of different color channels, so we created a
+      new BSDF similar to microfacet BSDF where we only modified the Fresnel
+      terms to allow iridescent rendering. So far we have modeled the thin film
+      with constant thickness, so more work needs to be done to make it have
+      varying thickness.
+    </p>
+    <p>
+      We will stick with our current work plan, so we are planning to finish up
+      iridescent rendering and black body radiation. We had some brainstorm
+      sessions on how to do iridescent rendering for soap bubbles (our stretch
+      goal) but haven’t had any luck. If time permits, we will take a deeper
+      dive into the problem.
+    </p>
+  </body>
 </html>
